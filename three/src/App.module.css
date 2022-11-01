@@ -1,0 +1,15 @@
+body {
+  display: grid;
+  place-content: center;
+}
+
+.name {
+  color: steelblue;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  margin-inline: auto;
+  color: mediumslateblue;
+}

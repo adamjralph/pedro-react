@@ -1,6 +1,7 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import styles from "./App.module.css";
+import { User } from "./User";
+import { Planet } from "./Planet";
 
 function App() {
   // return (
@@ -20,12 +21,39 @@ function App() {
   //   </div>
   // );
 
-  const names = ["Adam", "Julie", "James", "Jackson", "Betty", "Harold"];
+  // const users = [
+  //   { name: "Adam", age: 49 },
+  //   { name: "Julie", age: 29 },
+  //   { name: "Jackson", age: 19 },
+  //   { name: "Sally", age: 23 },
+  // ];
+  // return (
+  //   <div className="App">
+  //     {users.map((user, key) => {
+  //       return (
+  //         <User
+  //           name={user.name}
+  //           age={user.age}
+  //         />
+  //       );
+  //     })}
+  //   </div>
+  // );
+  const planets = [
+    { name: "Mars", isGasPlanet: false },
+    { name: "Earth", isGasPlanet: false },
+    { name: "Jupiter", isGasPlanet: true },
+    { name: "Venus", isGasPlanet: false },
+    { name: "Neptune", isGasPlanet: true },
+    { name: "Uranus", isGasPlanet: true },
+    { name: "Saturn", isGasPlanet: true },
+  ];
+
   return (
     <div className="App">
-      {names.map((name, key) => {
-        return <h1 key={key}>{name}</h1>;
-      })}
+      {planets.map(
+        (planet) => planet.isGasPlanet && <Planet name={planet.name} />
+      )}
     </div>
   );
 }
